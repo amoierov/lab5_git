@@ -21,6 +21,7 @@ class Files:
         str = "количество файлов"
         return str + str(self.num_files)
 
+
 class Read:
     """Класс чтения файла БД в словарь.
         Конструктор принимает путь до файла"""
