@@ -18,7 +18,7 @@ class Files:
             print("Невозможно найти папку.")
     def __repr__(self):
         """Метод перегружает функцию print"""
-        return "Количество файлов - " + str(self.num_files)
+        return "Количество файлов - "
 
 class Read:
     """Класс чтения файла БД в словарь.
