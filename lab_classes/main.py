@@ -7,13 +7,15 @@ class Files:
     num_files = 0
     def __init__(self, path):  # Функция подсчёта количества файлов в папке "D://LABS//Python//lab3"
         print("Путь папки: ", path)
-        for f in os.listdir(path):
+        try:
+            for f in os.listdir(path):
                 if (os.path.isfile(
                         os.path.join(path,
                                      f))):  # позволяет совместить несколько путей при помощи присвоенного разделителя
                     # Если файл является файлом, а не папкой, то увеличиваем счётчик на 1
                     self.num_files = self.num_files + 1
-
+        except FileNotFoundError:
+            print("Невозможно найти папку.")
     def __repr__(self):
         """Метод перегружает функцию print"""
         return "Количество файлов - " + str(self.num_files)
